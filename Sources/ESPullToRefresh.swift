@@ -104,6 +104,11 @@ public extension ES where Base: UIScrollView {
         self.base.footer = nil
     }
     
+    /// Hidden
+    func hiddenRefreshFooter(isHidden: Bool) {
+        self.base.footer?.isHidden = isHidden
+    }
+    
     /// Manual refresh
     func startPullToRefresh() {
         DispatchQueue.main.async { [weak base] in
